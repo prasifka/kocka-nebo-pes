@@ -1,5 +1,6 @@
 venv/
 *.pyc
-data/
+data/test/
+data/train/
 uploads/
 model.h5
