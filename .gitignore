@@ -1,2 +1,5 @@
 venv/
 *.pyc
+data/
+uploads/
+model.h5
