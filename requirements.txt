@@ -4,3 +4,4 @@ keras
 pandas
 flask
 pillow
+deepl

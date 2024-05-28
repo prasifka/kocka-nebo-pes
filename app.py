@@ -10,7 +10,7 @@ model = load_model('model.h5')
 
 app = Flask(__name__)
 
-translator = Trans("APIKEY")
+translator = Trans("61ebce20-5f5d-4002-943a-c442e5c773cd:fx")
 
 with open('data/list.txt', 'r') as file:
     animals = file.read().splitlines()
@@ -33,7 +33,7 @@ def index():
             return render_template('index.html', message=translator.translate_text('No file selected!', target_lang="cs"))
         file = request.files['file']
         if file.filename == '':
-            return render_template('index.html', message=translator.translate_text('No file selected!'), target_lang="cs")
+            return render_template('index.html', message=translator.translate_text('No file selected!', target_lang="cs"))
         if file:
             file_path = 'uploads/' + file.filename
             file.save(file_path)

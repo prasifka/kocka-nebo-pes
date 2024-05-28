@@ -19,6 +19,7 @@ for zvire in zvirata:
     trainl.extend([zvire] * len(obrazky))
 
 print('Trenovaci data: ', len(trainf))
+print('Tridy: ', zvirata)
 
 def dfn():
     model = Sequential()
