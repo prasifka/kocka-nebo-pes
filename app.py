@@ -3,7 +3,6 @@ from keras.models import load_model
 from keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import os
-import requests
 from deepl import Translator as Trans
 
 model = load_model('model.h5')
