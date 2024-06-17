@@ -70,5 +70,5 @@ train_it = datagen.flow_from_dataframe(
 )
 
 model = dfn()
-history = model.fit(train_it, steps_per_epoch=len(train_it), epochs=50, verbose=1)
+history = model.fit(train_it, steps_per_epoch=len(train_it), epochs=20, verbose=1)
 model.save('model.h5')

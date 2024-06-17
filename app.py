@@ -36,9 +36,9 @@ def index():
         if file:
             file_path = 'uploads/' + file.filename
             file.save(file_path)
-            result = translator.translate_text(classify(file_path), target_lang="cs")
+            result = translator.translate_text(classify(file_path), target_lang="cs", source_lang="en", context="animal")
             return render_template('index.html', message=translator.translate_text('Image uploaded!', target_lang="cs"), prediction=result)
     return render_template('index.html', message='', prediction='')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8001)
